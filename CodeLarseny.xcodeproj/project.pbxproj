@@ -12,10 +12,13 @@
 		65D0A97925A0DB220096064A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65D0A97825A0DB220096064A /* Assets.xcassets */; };
 		65D0A97C25A0DB220096064A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65D0A97B25A0DB220096064A /* Preview Assets.xcassets */; };
 		65D0A98C25A0DB550096064A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D0A98B25A0DB550096064A /* Cocoa.framework */; };
-		65D0A98E25A0DB550096064A /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D0A98D25A0DB550096064A /* XcodeKit.framework */; };
 		65D0A99125A0DB550096064A /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D0A99025A0DB550096064A /* SourceEditorExtension.swift */; };
-		65D0A99325A0DB550096064A /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D0A99225A0DB550096064A /* SourceEditorCommand.swift */; };
+		65D0A99325A0DB550096064A /* CodeLarsenyCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D0A99225A0DB550096064A /* CodeLarsenyCommand.swift */; };
 		65D0A99825A0DB550096064A /* XcodeLarseny.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 65D0A98925A0DB550096064A /* XcodeLarseny.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		65D0A9A025A116490096064A /* CodingLarsenyMenuCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D0A99F25A116490096064A /* CodingLarsenyMenuCommand.swift */; };
+		65D0A9A825A134680096064A /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D0A9A725A134680096064A /* Array+Extensions.swift */; };
+		65D0A9AB25A13C2C0096064A /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D0A98D25A0DB550096064A /* XcodeKit.framework */; };
+		65D0A9AC25A13C2C0096064A /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65D0A98D25A0DB550096064A /* XcodeKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,17 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		65D0A9AD25A13C2C0096064A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				65D0A9AC25A13C2C0096064A /* XcodeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -54,9 +68,11 @@
 		65D0A98B25A0DB550096064A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		65D0A98D25A0DB550096064A /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
 		65D0A99025A0DB550096064A /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
-		65D0A99225A0DB550096064A /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
+		65D0A99225A0DB550096064A /* CodeLarsenyCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeLarsenyCommand.swift; sourceTree = "<group>"; };
 		65D0A99425A0DB550096064A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65D0A99525A0DB550096064A /* XcodeLarseny.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XcodeLarseny.entitlements; sourceTree = "<group>"; };
+		65D0A99F25A116490096064A /* CodingLarsenyMenuCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingLarsenyMenuCommand.swift; sourceTree = "<group>"; };
+		65D0A9A725A134680096064A /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +88,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65D0A98C25A0DB550096064A /* Cocoa.framework in Frameworks */,
-				65D0A98E25A0DB550096064A /* XcodeKit.framework in Frameworks */,
+				65D0A9AB25A13C2C0096064A /* XcodeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +148,9 @@
 			isa = PBXGroup;
 			children = (
 				65D0A99025A0DB550096064A /* SourceEditorExtension.swift */,
-				65D0A99225A0DB550096064A /* SourceEditorCommand.swift */,
+				65D0A99F25A116490096064A /* CodingLarsenyMenuCommand.swift */,
+				65D0A99225A0DB550096064A /* CodeLarsenyCommand.swift */,
+				65D0A9A725A134680096064A /* Array+Extensions.swift */,
 				65D0A99425A0DB550096064A /* Info.plist */,
 				65D0A99525A0DB550096064A /* XcodeLarseny.entitlements */,
 			);
@@ -168,6 +186,7 @@
 				65D0A98525A0DB550096064A /* Sources */,
 				65D0A98625A0DB550096064A /* Frameworks */,
 				65D0A98725A0DB550096064A /* Resources */,
+				65D0A9AD25A13C2C0096064A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -248,7 +267,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				65D0A99125A0DB550096064A /* SourceEditorExtension.swift in Sources */,
-				65D0A99325A0DB550096064A /* SourceEditorCommand.swift in Sources */,
+				65D0A9A025A116490096064A /* CodingLarsenyMenuCommand.swift in Sources */,
+				65D0A99325A0DB550096064A /* CodeLarsenyCommand.swift in Sources */,
+				65D0A9A825A134680096064A /* Array+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,15 +6,25 @@
 //
 
 import Foundation
+import os
 import XcodeKit
 
 class SourceEditorExtension: NSObject, XCSourceEditorExtension {
     
-    /*
-    func extensionDidFinishLaunching() {
-        // If your extension needs to do any work at launch, implement this optional method.
+    var commandDefinitions: [[XCSourceEditorCommandDefinitionKey : Any]] {
+        let namespace = Bundle(for: type(of: self)).bundleIdentifier!
+        let marker = CodeLarsenyCommand.className()
+        return CodingLarsenyMenuCommand.allCases.map { command in
+            [.identifierKey: [namespace, marker, command.rawValue].joined(separator: "."),
+             .classNameKey: marker,
+             .nameKey: NSLocalizedString(command.title,
+                                         comment: "\(command.title) menu item")]
+        }
     }
-    */
+    
+    func extensionDidFinishLaunching() {
+        os_log("Extension ready", type: .debug)
+    }
     
     /*
     var commandDefinitions: [[XCSourceEditorCommandDefinitionKey: Any]] {
