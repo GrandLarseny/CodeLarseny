@@ -16,9 +16,12 @@
 		65D0A99325A0DB550096064A /* CodeLarsenyCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D0A99225A0DB550096064A /* CodeLarsenyCommand.swift */; };
 		65D0A99825A0DB550096064A /* XcodeLarseny.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 65D0A98925A0DB550096064A /* XcodeLarseny.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		65D0A9A025A116490096064A /* CodingLarsenyMenuCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D0A99F25A116490096064A /* CodingLarsenyMenuCommand.swift */; };
-		65D0A9A825A134680096064A /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D0A9A725A134680096064A /* Array+Extensions.swift */; };
 		65D0A9AB25A13C2C0096064A /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D0A98D25A0DB550096064A /* XcodeKit.framework */; };
 		65D0A9AC25A13C2C0096064A /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65D0A98D25A0DB550096064A /* XcodeKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		65D0A9B325A22D060096064A /* PlagroundFolderPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D0A9B225A22D060096064A /* PlagroundFolderPicker.swift */; };
+		65D0A9B625A56EEC0096064A /* DefaultPlaygroundDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D0A9B525A56EEC0096064A /* DefaultPlaygroundDirectory.swift */; };
+		65D0A9B825A570660096064A /* DefaultPlaygroundDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D0A9B525A56EEC0096064A /* DefaultPlaygroundDirectory.swift */; };
+		65D0A9BF25AE9E580096064A /* PlaygroundType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D0A9BE25AE9E580096064A /* PlaygroundType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +75,10 @@
 		65D0A99425A0DB550096064A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65D0A99525A0DB550096064A /* XcodeLarseny.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XcodeLarseny.entitlements; sourceTree = "<group>"; };
 		65D0A99F25A116490096064A /* CodingLarsenyMenuCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingLarsenyMenuCommand.swift; sourceTree = "<group>"; };
-		65D0A9A725A134680096064A /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		65D0A9B225A22D060096064A /* PlagroundFolderPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlagroundFolderPicker.swift; sourceTree = "<group>"; };
+		65D0A9B525A56EEC0096064A /* DefaultPlaygroundDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPlaygroundDirectory.swift; sourceTree = "<group>"; };
+		65D0A9BE25AE9E580096064A /* PlaygroundType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundType.swift; sourceTree = "<group>"; };
+		65D0A9C125AE9EAF0096064A /* iOS-Template.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = "iOS-Template.playground"; path = "CodeLarseny/Resources/iOS-Template.playground"; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				65D0A97425A0DB210096064A /* CodeLarsenyApp.swift */,
+				65D0A9B225A22D060096064A /* PlagroundFolderPicker.swift */,
+				65D0A9B525A56EEC0096064A /* DefaultPlaygroundDirectory.swift */,
 				65D0A97625A0DB210096064A /* ContentView.swift */,
 				65D0A97825A0DB220096064A /* Assets.xcassets */,
 				65D0A97D25A0DB220096064A /* Info.plist */,
@@ -147,10 +155,11 @@
 		65D0A98F25A0DB550096064A /* XcodeLarseny */ = {
 			isa = PBXGroup;
 			children = (
+				65D0A9C125AE9EAF0096064A /* iOS-Template.playground */,
 				65D0A99025A0DB550096064A /* SourceEditorExtension.swift */,
 				65D0A99F25A116490096064A /* CodingLarsenyMenuCommand.swift */,
 				65D0A99225A0DB550096064A /* CodeLarsenyCommand.swift */,
-				65D0A9A725A134680096064A /* Array+Extensions.swift */,
+				65D0A9BE25AE9E580096064A /* PlaygroundType.swift */,
 				65D0A99425A0DB550096064A /* Info.plist */,
 				65D0A99525A0DB550096064A /* XcodeLarseny.entitlements */,
 			);
@@ -257,7 +266,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65D0A9B625A56EEC0096064A /* DefaultPlaygroundDirectory.swift in Sources */,
 				65D0A97725A0DB210096064A /* ContentView.swift in Sources */,
+				65D0A9B325A22D060096064A /* PlagroundFolderPicker.swift in Sources */,
 				65D0A97525A0DB210096064A /* CodeLarsenyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,10 +277,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65D0A9B825A570660096064A /* DefaultPlaygroundDirectory.swift in Sources */,
 				65D0A99125A0DB550096064A /* SourceEditorExtension.swift in Sources */,
 				65D0A9A025A116490096064A /* CodingLarsenyMenuCommand.swift in Sources */,
 				65D0A99325A0DB550096064A /* CodeLarsenyCommand.swift in Sources */,
-				65D0A9A825A134680096064A /* Array+Extensions.swift in Sources */,
+				65D0A9BF25AE9E580096064A /* PlaygroundType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,7 +429,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.fjord.CodeLarseny;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -442,7 +454,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.fjord.CodeLarseny;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
