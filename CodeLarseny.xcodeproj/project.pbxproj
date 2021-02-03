@@ -17,11 +17,12 @@
 		65D0A99825A0DB550096064A /* XcodeLarseny.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 65D0A98925A0DB550096064A /* XcodeLarseny.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		65D0A9A025A116490096064A /* CodingLarsenyMenuCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D0A99F25A116490096064A /* CodingLarsenyMenuCommand.swift */; };
 		65D0A9AB25A13C2C0096064A /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D0A98D25A0DB550096064A /* XcodeKit.framework */; };
-		65D0A9AC25A13C2C0096064A /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65D0A98D25A0DB550096064A /* XcodeKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		65D0A9AC25A13C2C0096064A /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65D0A98D25A0DB550096064A /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		65D0A9B325A22D060096064A /* PlagroundFolderPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D0A9B225A22D060096064A /* PlagroundFolderPicker.swift */; };
 		65D0A9B625A56EEC0096064A /* DefaultPlaygroundDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D0A9B525A56EEC0096064A /* DefaultPlaygroundDirectory.swift */; };
 		65D0A9B825A570660096064A /* DefaultPlaygroundDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D0A9B525A56EEC0096064A /* DefaultPlaygroundDirectory.swift */; };
 		65D0A9BF25AE9E580096064A /* PlaygroundType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D0A9BE25AE9E580096064A /* PlaygroundType.swift */; };
+		65D0A9C625B3F58E0096064A /* PlaygroundFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D0A9C525B3F58E0096064A /* PlaygroundFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,7 +79,7 @@
 		65D0A9B225A22D060096064A /* PlagroundFolderPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlagroundFolderPicker.swift; sourceTree = "<group>"; };
 		65D0A9B525A56EEC0096064A /* DefaultPlaygroundDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultPlaygroundDirectory.swift; sourceTree = "<group>"; };
 		65D0A9BE25AE9E580096064A /* PlaygroundType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundType.swift; sourceTree = "<group>"; };
-		65D0A9C125AE9EAF0096064A /* iOS-Template.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = "iOS-Template.playground"; path = "CodeLarseny/Resources/iOS-Template.playground"; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		65D0A9C525B3F58E0096064A /* PlaygroundFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundFile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,11 +156,11 @@
 		65D0A98F25A0DB550096064A /* XcodeLarseny */ = {
 			isa = PBXGroup;
 			children = (
-				65D0A9C125AE9EAF0096064A /* iOS-Template.playground */,
 				65D0A99025A0DB550096064A /* SourceEditorExtension.swift */,
 				65D0A99F25A116490096064A /* CodingLarsenyMenuCommand.swift */,
 				65D0A99225A0DB550096064A /* CodeLarsenyCommand.swift */,
 				65D0A9BE25AE9E580096064A /* PlaygroundType.swift */,
+				65D0A9C525B3F58E0096064A /* PlaygroundFile.swift */,
 				65D0A99425A0DB550096064A /* Info.plist */,
 				65D0A99525A0DB550096064A /* XcodeLarseny.entitlements */,
 			);
@@ -213,7 +214,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1230;
-				LastUpgradeCheck = 1230;
+				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					65D0A97025A0DB210096064A = {
 						CreatedOnToolsVersion = 12.3;
@@ -279,6 +280,7 @@
 			files = (
 				65D0A9B825A570660096064A /* DefaultPlaygroundDirectory.swift in Sources */,
 				65D0A99125A0DB550096064A /* SourceEditorExtension.swift in Sources */,
+				65D0A9C625B3F58E0096064A /* PlaygroundFile.swift in Sources */,
 				65D0A9A025A116490096064A /* CodingLarsenyMenuCommand.swift in Sources */,
 				65D0A99325A0DB550096064A /* CodeLarsenyCommand.swift in Sources */,
 				65D0A9BF25AE9E580096064A /* PlaygroundType.swift in Sources */,
@@ -418,6 +420,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = CodeLarseny/CodeLarseny.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"CodeLarseny/Preview Content\"";
@@ -443,6 +446,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = CodeLarseny/CodeLarseny.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"CodeLarseny/Preview Content\"";
@@ -465,6 +469,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = XcodeLarseny/XcodeLarseny.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = PCN2DU35B6;
@@ -486,6 +491,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = XcodeLarseny/XcodeLarseny.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = PCN2DU35B6;

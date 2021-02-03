@@ -11,8 +11,10 @@ enum DefaultPlaygroundDirectory {
     
     private static let defaultsKey = "xcl.playgroundDir"
     
+    static var userDefaults: UserDefaults! { UserDefaults(suiteName: "group.org.fjord.CodeLarseny") }
+    
     static var path: String? {
-        return UserDefaults.standard.string(forKey: defaultsKey)
+        return userDefaults.string(forKey: defaultsKey)
     }
     
     static var url: URL? {
@@ -24,7 +26,7 @@ enum DefaultPlaygroundDirectory {
             }
         }
         set {
-            UserDefaults.standard.set(newValue?.absoluteString, forKey: defaultsKey)
+            userDefaults.set(newValue?.absoluteString, forKey: defaultsKey)
         }
     }
 }
